@@ -17,8 +17,11 @@ Prerequisites:
 Brief overview given [here](https://www.biostars.org/p/47487/). Here are the commands I used for four samples from one parental population (two technical replicates for each sex). 
 
 `java -jar /home/hdd/3/picard/dist/picard.jar AddOrReplaceReadGroups I=C-ma.bam O=C-ma_RG.bam RGID=1 RGLB=1 RGPL=illumina RGPU=1 RGSM=C-F`
+
 `java -jar /home/hdd/3/picard/dist/picard.jar AddOrReplaceReadGroups I=C-mb.bam O=C-mb_RG.bam RGID=2 RGLB=1 RGPL=illumina RGPU=2 RGSM=C-F`
+
 `java -jar /home/hdd/3/picard/dist/picard.jar AddOrReplaceReadGroups I=C-fa.bam O=C-fa_RG.bam RGID=3 RGLB=2 RGPL=illumina RGPU=3 RGSM=C-M`
+
 `java -jar /home/hdd/3/picard/dist/picard.jar AddOrReplaceReadGroups I=C-fb.bam O=C-fb_RG.bam RGID=4 RGLB=2 RGPL=illumina RGPU=4 RGSM=C-M`
 
 ####Mark and remove PCR duplicates
