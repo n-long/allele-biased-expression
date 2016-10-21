@@ -3,13 +3,13 @@
 This analysis is tailored for pooled sequencing experiments in which DNA-seq is available for each parental population and RNA-Seq for the hybrid offspring. Parental sequence processing is only shown for one parent, but must be done separately. Not shown: standard preprocessing for sequencing reads such as error correction and quality filtering. 
 
 Prerequisites:  
-[bowtie1](https://sourceforge.net/projects/bowtie-bio/files/bowtie/1.1.2/)
-[MMSEQ](https://github.com/eturro/mmseq)
-[GATK](https://software.broadinstitute.org/gatk/download/)
-[FreeBayes](https://github.com/ekg/freebayes)
-[VCFfilter](https://github.com/vcflib/vcflib)
-[bedtools](https://github.com/arq5x/bedtools2/releases)
-[seqmagick](https://github.com/fhcrc/seqmagick)
+[bowtie1](https://sourceforge.net/projects/bowtie-bio/files/bowtie/1.1.2/)  
+[MMSEQ](https://github.com/eturro/mmseq)  
+[GATK](https://software.broadinstitute.org/gatk/download/)  
+[FreeBayes](https://github.com/ekg/freebayes)  
+[VCFfilter](https://github.com/vcflib/vcflib)  
+[bedtools](https://github.com/arq5x/bedtools2/releases)  
+[seqmagick](https://github.com/fhcrc/seqmagick)  
 [GNU Parallel](https://www.gnu.org/software/parallel/)
 
 ####Add read groups to DNA-seq parental samples
@@ -71,7 +71,7 @@ Deduplicate as safety measure. My transcript reference contained duplicates for 
 
 Now that we have a bi-allelic reference transcriptome, we can determine biased expression if F1 hybrid RNA-seq reads uniquely map to one parent's copy in a dominant manner. 
 
-Quick note: some raw read error-correction tools (such as [BFC](https://github.com/lh3/bfc) add tags to the FASTQ header which will throw an error with bowtie such as "[main_samview] truncated file." This can be alleviated by 
+Quick note: some raw read error-correction tools (such as [BFC](https://github.com/lh3/bfc)) add tags to the FASTQ header which will throw an error with bowtie such as "[main_samview] truncated file." This can be alleviated by 
 
 `awk '{print $1}' sample.1.fq > sample_.1.fq`
 
